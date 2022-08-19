@@ -1,0 +1,5 @@
+rootProject.name = 'jvm-lang'
+include 'groovy-example'
+include 'java-example'
+include 'kotlin-example'
+
