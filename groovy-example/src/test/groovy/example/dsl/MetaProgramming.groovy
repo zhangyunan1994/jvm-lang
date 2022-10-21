@@ -36,4 +36,20 @@ assert someGroovyClass.field3 == 'field3'
 assert someGroovyClass.field4 == 'hu'
 
 
+class AnyRecord {
+    def data = [:]
 
+    @Override
+    def getProperty(String name) {
+        return data[name]
+    }
+
+    @Override
+    void setProperty(String propertyName, Object newValue) {
+        data[propertyName] = newValue
+    }
+}
+
+def anyRecord = new AnyRecord()
+anyRecord.abc = "123"
+assert anyRecord.abc == "123"
